@@ -3,6 +3,8 @@
 Parsing input file for coordinates of nodes and colors(optional) and building 3D-wireframe.
 MiniLibX and own libft libraries were used to make this project.
 
+![screenshot](screenshot.png?raw=true)
+
 ## Features
 * Movement: mouse left key
 * Zoom:   mouse wheel
@@ -24,6 +26,6 @@ MiniLibX and own libft libraries were used to make this project.
 * Reset settings: 0
  
  ## Instructions
-- "make" to make binary file or "make re" to recompile.
+- Run `make` to make binary file or `make re` to recompile.
 - Sample files located at "maps" directory.
-- Execute as: "./fdf maps/42.fdf"
+- Execute as `./fdf maps/42.fdf`

@@ -6,7 +6,7 @@
 #    By: ahugh <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 18:51:35 by ahugh             #+#    #+#              #
-#    Updated: 2019/05/01 02:23:22 by djon-con         ###   ########.fr        #
+#    Updated: 2019/05/01 02:27:17 by djon-con         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,8 +63,7 @@ HEADERPATH		=	headers libft/includes
 
 CC				=	gcc
 
-OBJ				= $(FILES:.c=.o)
-
+OBJ				=	$(FILES:.c=.o)
 
 all: $(NAME)
 

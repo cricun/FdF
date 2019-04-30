@@ -6,13 +6,13 @@
 #    By: ahugh <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 18:51:35 by ahugh             #+#    #+#              #
-#    Updated: 2019/04/12 23:50:42 by djon-con         ###   ########.fr        #
+#    Updated: 2019/05/01 02:23:22 by djon-con         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	fdf
 
-FILES			=	main.c \
+FILES			=	$(addprefix sources/, main.c \
 					draw_line.c \
 					utils_draw_line.c \
 					color.c \
@@ -43,7 +43,7 @@ FILES			=	main.c \
 					press_actions.c \
 					print_help.c \
 					is_number.c \
-					forever_loop.c
+					forever_loop.c)
 
 DIR_MLX			=	minilibx_macos
 
@@ -57,7 +57,9 @@ FRAMEWORKS		=	-framework OpenGL -framework Appkit
 
 FLAGS			=	$(LIB_DIR)/$(LIB_FT) $(LIB_MLX) $(FRAMEWORKS)
 
-HEADER			=	draw.h
+HEADER			=	$(addprefix headers/, draw.h color.h)
+
+HEADERPATH		=	headers libft/includes
 
 CC				=	gcc
 
@@ -71,9 +73,10 @@ $(NAME): $(OBJ)
 				@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
 
 %.o: %.c $(HEADER)
-				@$(CC) -c $< -o $@
+				@$(CC) -c $< -o $@ -I $(HEADERPATH)
 
 clean:
+				@$(MAKE) -C $(LIB_DIR) clean >> /dev/null
 				@rm -f *.o
 				
 fclean: clean

@@ -6,13 +6,13 @@
 /*   By: ahugh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 22:54:20 by ahugh             #+#    #+#             */
-/*   Updated: 2019/04/14 15:56:47 by djon-con         ###   ########.fr       */
+/*   Updated: 2019/05/01 02:18:44 by djon-con         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DRAW_H
 # define DRAW_H
-# include "libft/includes/libft.h"
+# include "libft.h"
 # include "mlx.h"
 # include "color.h"
 # include <math.h>
